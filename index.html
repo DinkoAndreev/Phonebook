@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Phonebook</title>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#/">Phonebook</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Menu</li>
+                    <li><a href="#/all-phones">All Phones</a></li>
+                    <li><a href="#/add-phone">Add Phone</a></li>
+                    <li><a href="#/import-phones">Import Phones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <div id="wrapper" class="hero-unit">
+                <h2>Phonebook</h2>
+                <table id="phones-table" class="table">
+                    <tbody>
+                    <tr id="contacts-head">
+                        <th>ID</th>
+                        <th>Phone</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Gender</th>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <form id="phones-form">
+                    <div class="item text">
+                        <label>Phone:</label>
+                        <div class="form-group"><input type="text" name="phone" id="phone" required></div>
+                    </div>
+                    <div class="item text">
+                        <label>Name:</label>
+                        <div class="form-group"><input type="text" name="name" required></div>
+                    </div>
+                    <div class="item text">
+                        <label>City:</label>
+                        <div class="form-group"><input type="text" name="city"></div>
+                    </div>
+                    <div class="item text">
+                        <label>Gender:</label>
+                        <div class="form-group"><input type="text" name="gender" required></div>
+                    </div>
+                    <div class="item text">
+                        <label>Zodiac:</label>
+                        <div class="form-group"><select name="zodiac">
+                            <option></option>
+                            <option>Aries</option>
+                            <option>Taurus</option>
+                            <option>Gemini</option>
+                            <option>Cancer</option>
+                            <option>Leo</option>
+                            <option>Virgo</option>
+                            <option>Libra</option>
+                            <option>Scorpio</option>
+                            <option>Sagittarius</option>
+                            <option>Capricorn</option>
+                            <option>Aquarius</option>
+                            <option>Pisces</option>
+                            <option>Овен</option>
+                            <option>Телец</option>
+                            <option>Близнаци</option>
+                            <option>Рак</option>
+                            <option>Лъв</option>
+                            <option>Дева</option>
+                            <option>Везни</option>
+                            <option>Скорпион</option>
+                            <option>Стрелец</option>
+                            <option>Козирог</option>
+                            <option>Водолей</option>
+                            <option>Риби</option>
+                        </select>
+                        </div>
+            </div>
+                    <div class="item text">
+                        <label>Note:</label>
+                        <div class="form-group"><input type="text" name="note"></div>
+                    </div>
+                    <div class="button-wrapper" id="button-wrapper">
+                        <div class="item button">
+                            <div class="form-group"><input type="button" id="discard" value="Discard"></div>
+                        </div>
+                        <div class="item button button-default">
+                            <div class="form-group">
+                                    <input type="submit" id="save" value="Save" onclick="return validateForm()">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id_entry" value="0">
+                </form>
+                <form id="add-phones-form">
+                    <div class="form-group">
+                        <label>Text input:</label>
+                        <textarea class="form-control" id="inputText" name="inputText"></textarea>
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="item button button-default">
+                            <div class="form-group">
+                                <input type="submit" id="saveText" value="Save">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="libs/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="libs/shimney-sammy/main.js"></script>
+
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/routing.js"></script>
+<script type="text/javascript" src="scripts/validation.js"></script>
+</body>
+</html>
